@@ -1,0 +1,47 @@
+<div class="miBody">
+    
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid ">
+            <div>
+                <button class="btn btn-outline-success me-2" type="button" (click)="onClick('/NBlog')">¡Hora de publicar nena!</button>
+                <button class="btn btn-outline-success me-2" (click)="onClick('/BlogList')">Veamos que han escrito los demás</button>
+            </div>
+            <div>
+                <select class="selector" (change)="onChange($event)">
+                    <option value="todas">Todas las series</option>
+                    @for (canal of arrCategorias; track $index) {
+                    <option>{{ canal }}</option>
+                    }
+                </select>
+            </div>
+        </form>
+    </nav>
+
+
+    <div class="miContainer">
+
+        @for (articulo of arrPosts; track $index) {
+            <article class="post">
+
+                <h2>{{articulo.titulo}}</h2>
+                <div class="fotoTextContain">
+                    <img [src]="articulo.imagen">
+            
+                    <p>{{articulo.texto}}</p>
+                </div>
+            
+                <hr>
+            
+                <div class="footPost">
+                    <p>{{articulo.fecha}}</p>
+                    <p>{{articulo.autor}}</p>
+                    <p>{{articulo.categoria}}</p>
+                </div>
+            
+            </article>
+        }
+
+    </div>
+
+
+

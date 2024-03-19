@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic' );
+
+.miBody {
+    background: linear-gradient(140deg, rgb(186, 186, 241) 0%, rgb(188, 233, 228) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.miContainer {
+    max-width: 90%;
+
+}
+
+.navbar {
+    width: 100%;
+    font-family: 'Playfair';
+    
+}
+
+.selector {
+    border: 0;
+    width: 10rem;
+    height:2rem;
+    padding: 0 4em 0 1em;
+    color: rgb(82, 81, 81);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: linear-gradient(170deg, rgb(186, 186, 241) 0%, rgb(188, 233, 228) 100%);
+    
+}
+
+.btn {
+    color: rgb(82, 81, 81);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+    background: linear-gradient(170deg, rgb(186, 186, 241) 0%, rgb(188, 233, 228) 100%);
+
+}
+
+.post {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    background-color: rgb(241, 241, 250);
+    border-radius: 5px 5px;
+    border-left: 1px rgba(108, 38, 158, 0.589) dashed;
+    border-right: 1px rgba(108, 38, 158, 0.589) dashed;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+        & h2 {
+            font-family: 'Playfair';
+            padding-bottom: 15px;
+        }
+}
+
+.fotoTextContain {
+    overflow: auto;       
+    margin-bottom: 60px;
+    font-family: 'Roboto';
+
+    & img {
+        width: 300px;
+        height: auto;
+        display: block;
+        float: left;
+        margin-right: 15px;
+        border-radius: 25px;
+    }
+
+    
+}
+
+.footPost {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-family: 'Playfair';
+    font-style: italic;
+    font-size: 1.25rem;
+}

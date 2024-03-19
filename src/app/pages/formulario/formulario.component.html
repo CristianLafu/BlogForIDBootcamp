@@ -1,0 +1,55 @@
+<div class="miBody">
+    <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button" (click)="onClick('/NBlog')">¡Hora de publicar nena!</button>
+            <button class="btn btn-outline-success me-2" (click)="onClick('/BlogList')">Veamos que han escrito los demás</button>
+        </form>
+    </nav>
+
+
+    <form class="miForm" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" formControlName="titulo" />
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <input placeholder="¡Recuerda que el tamaño mínimo son treinta caracteres!" type="text" class="form-control H120" formControlName="texto"/>
+    
+            @if ( checkError("texto", "minLength")) {
+            <p class="error">Tan cortito no me vale, la técnica no lo es todo aunque te digan lo contrario.</p>
+            }
+
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" formControlName="autor"/>
+
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Imagen</label>
+            <input placeholder="¡Copia aquí la URL de la imagen!" class="form-control" formControlName="imagen"/>
+        
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Fecha</label>
+            <input placeholder="Sugerimos dia/mes/año, pero no limites tu creatividad." class="form-control" formControlName="fecha"/>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Categoria</label>
+            <input type="text" class="form-control" formControlName="categoria"/>
+
+        </div>
+
+        <input type="Submit" value="Enviar" class="btn btn-info" [disabled]="!formulario.valid">
+
+    </form>
+</div>
